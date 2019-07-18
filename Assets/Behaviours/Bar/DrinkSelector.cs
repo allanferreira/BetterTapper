@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrinkSelector : MonoBehaviour
 {
 
     public IntegerScriptable playerDrink;
-    readonly List<double> positions =  new List<double> {0, -4.5, 0, 4.5 };
-    SpriteRenderer spriteRenderer;
+    readonly List<double> positions =  new List<double> {0, -450, 0, 450 };
+    Image image;
     
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>();
     }
 
     void Update()
     {
-
-        spriteRenderer.enabled = HaveDrinkSelected();
+        image.enabled = HaveDrinkSelected();
         UpdatePositionX((float)positions[playerDrink.value]);
        
     }
