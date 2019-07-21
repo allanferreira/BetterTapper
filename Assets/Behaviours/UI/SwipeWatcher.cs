@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SwipeWatcher : MonoBehaviour, IDragHandler, IEndDragHandler
+public class SwipeWatcher : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
 
     public GameObject player;
@@ -19,7 +19,7 @@ public class SwipeWatcher : MonoBehaviour, IDragHandler, IEndDragHandler
         // needs to be empty
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData)
     {
         Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
         playerMovement.Move(GetDragDirection(dragVectorDirection));
