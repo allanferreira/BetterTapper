@@ -7,92 +7,80 @@ public class PlayerMovement : MonoBehaviour
 
     float speed = 8f;
     float distance;
-    float gridDistance = 0.81f;
-    Vector3 nextGrid;
+    List<Vector3> grid;
+    int currentPosition;
+
 
     void Start()
     {
         distance = Time.fixedDeltaTime * speed;
-        nextGrid = new Vector3(transform.localPosition.x, transform.localPosition.y);
+        currentPosition = 0;
+
+        grid = new List<Vector3> {
+            new Vector3(transform.position.x, -0.33f),
+            new Vector3(transform.position.x, 0.48f),
+            new Vector3(transform.position.x, 1.29f),
+            new Vector3(transform.position.x, 2.1f)
+        };
     }
 
-    private void Update()
+    void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.localPosition, nextGrid, distance);
+        MoveToCurrentPosition();
+    }
+
+    void MoveToCurrentPosition()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, grid[currentPosition], distance);
     }
 
     public void Move(string direction)
     {
 
-        print(direction);
-        switch (direction)
+        if (direction == "Up" || direction == "Down")
         {
-            case ("Up"):
-
-                if (CanMove("Up"))
-                {
-                    MoveInGrid("Up");
-                }
-
-                break;
-            case ("Left"):
-
-                Delivery("Left");
-
-                break;
-            case ("Right"):
-
-                Delivery("Right");
-
-                break;
-            case ("Down"):
-
-                if (CanMove("Down"))
-                {
-                    MoveInGrid("Down");
-                }
-
-                break;
+            if(CanMove(direction)) MoveToDirection(direction);
         }
-
-    }
-
-    void Delivery(string direction)
-    {
+        else if (direction == "Left" || direction == "Right")
+        {
+            Devilery(direction);
+        }
 
     }
 
     bool CanMove(string direction)
     {
-        bool value;
+        bool res = false;
+
         if (direction == "Up")
         {
-            value = transform.localPosition.y >= 2.1 ? false : true;
+            res = currentPosition + 1 <= 3;
         }
         else if (direction == "Down")
         {
-            value = transform.localPosition.y <= -0.33 ? false : true;
-        }
-        else
-        {
-            value = true;
+            res = currentPosition - 1 >= 0;
         }
 
-        return value;
-
+        return res;            
     }
 
-    void MoveInGrid(string direction)
+    void MoveToDirection(string direction)
     {
 
         if (direction == "Up")
         {
-            nextGrid = new Vector3(transform.localPosition.x, transform.localPosition.y + gridDistance);
+            currentPosition++;
         }
-        if (direction == "Down")
+        else if (direction == "Down")
         {
-            nextGrid = new Vector3(transform.localPosition.x, transform.localPosition.y - gridDistance);
+            currentPosition--;
         }
 
     }
+
+    void Devilery(string direction)
+    {
+
+    }
+
 }
