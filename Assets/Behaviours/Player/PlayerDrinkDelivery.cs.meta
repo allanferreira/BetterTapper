@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 3b7c6522b0aee476ab47303176b19aff
+guid: d1dbd31ab48b84e7894b6896dd54bea9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
   - playerGridPosition: {fileID: 11400000, guid: ef0bd8fbd3d654dc5bc71d2367ab9ab3,
       type: 2}
+  - playerDrink: {fileID: 11400000, guid: f64032712087a4e92a2490f149a7f820, type: 2}
   - orderFeedbackUI: {fileID: 5184081029282122187, guid: 0f72f07918ff44ce39b253c0b3719b78,
       type: 3}
+  - ordersPerTable: {fileID: 11400000, guid: e86c652cbe4954e738f5245509aa0b89, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

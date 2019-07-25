@@ -17,7 +17,6 @@ public class ChooseDrink : MonoBehaviour
 
     void ClickHandler()
     {
-        print(drinkNumber);
         playerDrink.value = drinkNumber;
     }
 }

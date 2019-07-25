@@ -8,13 +8,20 @@ public class PlayerMovement : MonoBehaviour
     float speed = 8f;
     float distance;
     List<Vector3> grid;
-    int currentPosition;
+    public IntegerScriptable playerGridPosition;
+    PlayerDrinkDelivery playerDrinkDelivery;
+    public GameObject orderFeedbackUI;
+    OrderFeedbackRender orderFeedbackRender;
 
 
     void Start()
     {
+        orderFeedbackRender = orderFeedbackUI.GetComponentInChildren<OrderFeedbackRender>();
+
         distance = Time.fixedDeltaTime * speed;
-        currentPosition = 0;
+        playerGridPosition.value = 0;
+
+        playerDrinkDelivery = gameObject.GetComponent<PlayerDrinkDelivery>();
 
         grid = new List<Vector3> {
             new Vector3(transform.position.x, -0.33f),
@@ -31,11 +38,12 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveToCurrentPosition()
     {
-        transform.position = Vector3.MoveTowards(transform.position, grid[currentPosition], distance);
+        transform.position = Vector3.MoveTowards(transform.position, grid[playerGridPosition.value], distance);
     }
 
     public void Move(string direction)
     {
+        orderFeedbackRender.Clear();
 
         if (direction == "Up" || direction == "Down")
         {
@@ -43,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (direction == "Left" || direction == "Right")
         {
-            Devilery(direction);
+            playerDrinkDelivery.Delivery(direction);
         }
 
     }
@@ -54,11 +62,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (direction == "Up")
         {
-            res = currentPosition + 1 <= 3;
+            res = playerGridPosition.value + 1 <= 3;
         }
         else if (direction == "Down")
         {
-            res = currentPosition - 1 >= 0;
+            res = playerGridPosition.value - 1 >= 0;
         }
 
         return res;            
@@ -69,17 +77,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (direction == "Up")
         {
-            currentPosition++;
+            playerGridPosition.value++;
         }
         else if (direction == "Down")
         {
-            currentPosition--;
+            playerGridPosition.value--;
         }
-
-    }
-
-    void Devilery(string direction)
-    {
 
     }
 

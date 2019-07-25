@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4641164599609682448}
   - component: {fileID: 3812497459241068783}
   - component: {fileID: 7511625705319947479}
+  - component: {fileID: 2839624987605633567}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -68,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d5bbac7009e10484894749fa50b9c1ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -92,4 +93,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7c6522b0aee476ab47303176b19aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsMoving: {fileID: 11400000, guid: bd8d229ab24b5419db4855340e42fc86, type: 2}
+  playerGridPosition: {fileID: 11400000, guid: ef0bd8fbd3d654dc5bc71d2367ab9ab3, type: 2}
+  orderFeedbackUI: {fileID: 5184081029282122187, guid: 0f72f07918ff44ce39b253c0b3719b78,
+    type: 3}
+--- !u!114 &2839624987605633567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163001200105893362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1dbd31ab48b84e7894b6896dd54bea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGridPosition: {fileID: 11400000, guid: ef0bd8fbd3d654dc5bc71d2367ab9ab3, type: 2}
+  playerDrink: {fileID: 11400000, guid: f64032712087a4e92a2490f149a7f820, type: 2}
+  orderFeedbackUI: {fileID: 5184081029282122187, guid: 0f72f07918ff44ce39b253c0b3719b78,
+    type: 3}
+  ordersPerTable: {fileID: 11400000, guid: e86c652cbe4954e738f5245509aa0b89, type: 2}
