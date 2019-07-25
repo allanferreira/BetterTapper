@@ -77,12 +77,18 @@ public class PlayerDrinkDelivery : MonoBehaviour
         if(currentOrder == playerDrink.value)
         {
             orderFeedbackRender.Message("Pedido correto", Color.green);
+            playerDrink.value = 0;
+        }
+        else if(currentOrder == 0)
+        {
+            orderFeedbackRender.Message("Mesa vazia", Color.white);
         }
         else
         {
             orderFeedbackRender.Message("Pedido incorreto", Color.red);
+            playerDrink.value = 0;
         }
 
-        playerDrink.value = 0;
+        
     }
 }
