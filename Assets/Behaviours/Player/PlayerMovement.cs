@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float speed = 8f;
     float distance;
     List<Vector3> grid;
+    public ListFloatScriptable movementGridY;
     public IntegerScriptable playerGridPosition;
     PlayerDrinkDelivery playerDrinkDelivery;
     public GameObject orderFeedbackUI;
@@ -24,10 +25,10 @@ public class PlayerMovement : MonoBehaviour
         playerDrinkDelivery = gameObject.GetComponent<PlayerDrinkDelivery>();
 
         grid = new List<Vector3> {
-            new Vector3(transform.position.x, -0.33f),
-            new Vector3(transform.position.x, 0.48f),
-            new Vector3(transform.position.x, 1.29f),
-            new Vector3(transform.position.x, 2.1f)
+            new Vector3(transform.position.x, movementGridY.value[0]),
+            new Vector3(transform.position.x, movementGridY.value[1]),
+            new Vector3(transform.position.x, movementGridY.value[2]),
+            new Vector3(transform.position.x, movementGridY.value[3])
         };
     }
 

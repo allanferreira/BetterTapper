@@ -11,12 +11,17 @@ public class PlayerDrinkDelivery : MonoBehaviour
 
     public ListIntegerScriptable ordersPerTable;
     int currentOrder;
+    int currentTableOrder;
     string currentOrderDirection;
 
     void Start()
     {
         playerDrink.value = 0;
-        ordersPerTable.value.ForEach(order => order = 0);
+        for (int i = 0; i < ordersPerTable.value.Count; i++)
+        {
+            ordersPerTable.value[i] = 0;
+        }
+        
 
         orderFeedbackRender = orderFeedbackUI.GetComponentInChildren<OrderFeedbackRender>();
     }
@@ -47,7 +52,7 @@ public class PlayerDrinkDelivery : MonoBehaviour
     void UpdateCurrentOrder()
     {
 
-        int currentTableOrder;
+        
 
         switch (playerGridPosition.value)
         {
@@ -78,6 +83,7 @@ public class PlayerDrinkDelivery : MonoBehaviour
         {
             orderFeedbackRender.Message("Pedido correto", Color.green);
             playerDrink.value = 0;
+            ordersPerTable.value[currentTableOrder] = 0;
         }
         else if(currentOrder == 0)
         {

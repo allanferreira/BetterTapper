@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9163001200105893362
+--- !u!1 &6938307958300287928
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4641164599609682448}
-  - component: {fileID: 3812497459241068783}
-  - component: {fileID: 7511625705319947479}
-  - component: {fileID: 2839624987605633567}
+  - component: {fileID: 2084049693118122260}
+  - component: {fileID: 6513566942148551304}
+  - component: {fileID: -419499350253104555}
   m_Layer: 0
-  m_Name: Player
+  m_Name: customer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4641164599609682448
+--- !u!4 &2084049693118122260
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9163001200105893362}
+  m_GameObject: {fileID: 6938307958300287928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0003, y: -0.5203, z: 0}
-  m_LocalScale: {x: 0.337645, y: 0.34415498, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.337645, y: 0.337645, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3812497459241068783
+--- !u!212 &6513566942148551304
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9163001200105893362}
+  m_GameObject: {fileID: 6938307958300287928}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: d5bbac7009e10484894749fa50b9c1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c1e5919a94fa443aa52dd11f02642bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,36 +80,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7511625705319947479
+--- !u!114 &-419499350253104555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9163001200105893362}
+  m_GameObject: {fileID: 6938307958300287928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7c6522b0aee476ab47303176b19aff, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c3ae75942e74cf89f45548fef3cf67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementGridY: {fileID: 11400000, guid: faec9d9ceaa5c41bd9a924fffc3e9bdf, type: 2}
-  playerGridPosition: {fileID: 11400000, guid: ef0bd8fbd3d654dc5bc71d2367ab9ab3, type: 2}
-  orderFeedbackUI: {fileID: 5184081029282122187, guid: 0f72f07918ff44ce39b253c0b3719b78,
-    type: 3}
---- !u!114 &2839624987605633567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9163001200105893362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1dbd31ab48b84e7894b6896dd54bea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerGridPosition: {fileID: 11400000, guid: ef0bd8fbd3d654dc5bc71d2367ab9ab3, type: 2}
-  playerDrink: {fileID: 11400000, guid: f64032712087a4e92a2490f149a7f820, type: 2}
-  orderFeedbackUI: {fileID: 5184081029282122187, guid: 0f72f07918ff44ce39b253c0b3719b78,
-    type: 3}
   ordersPerTable: {fileID: 11400000, guid: e86c652cbe4954e738f5245509aa0b89, type: 2}
+  movementGridY: {fileID: 11400000, guid: faec9d9ceaa5c41bd9a924fffc3e9bdf, type: 2}

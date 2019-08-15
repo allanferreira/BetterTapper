@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8309bdbd9198246a6865fb3ab6480b41
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ordersPerTable: {fileID: 11400000, guid: e86c652cbe4954e738f5245509aa0b89, type: 2}
+  - customer1: {fileID: 4611962273973356891, guid: 4909af8d3c762469cb068e5e3f8dd39a,
+      type: 3}
+  - customer2: {fileID: 6938307958300287928, guid: 593c887c7d15e484b88a8fe526f9f509,
+      type: 3}
+  - customer3: {fileID: 3236690758662997163, guid: b8797f19d8fc84d5bb1e56d1affd6723,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
