@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{BD89204F-BFF5-7140-805C-49F79BFB2302}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Behaviours/Customer/CustomerMovement.cs">
+    <Files>
+      <File FileName="Assets/Behaviours/Player/PlayerDrinkDelivery.cs" Line="62" Column="23" />
+      <File FileName="Assets/Behaviours/OrderFeedBack/OrderFeedbackRender.cs" Line="12" Column="1" />
+      <File FileName="Assets/Behaviours/CustomerManager/CustomerSpawn.cs" Line="34" Column="49" />
+      <File FileName="Assets/Behaviours/Customer/CustomerMovement.cs" Line="26" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BetterTapper" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Behaviours" expanded="True">
+                <Node name="Bar" expanded="True" />
+                <Node name="Customer" expanded="True">
+                  <Node name="CustomerMovement.cs" selected="True" />
+                </Node>
+                <Node name="CustomerManager" expanded="True" />
+                <Node name="OrderFeedBack" expanded="True" />
+                <Node name="Player" expanded="True" />
+              </Node>
+              <Node name="Scriptables" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="69f0ef42-39c0-49f2-aeb6-0f42ab490c94" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
